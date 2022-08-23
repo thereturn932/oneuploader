@@ -1,0 +1,46 @@
+.title {
+  width: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text {
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-color: rgb(36, 36, 36);
+}
+
+.message-text {
+  text-align: center;
+  color: rgb(133, 218, 255);
+}
+
+.containers {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 5px;
+  margin-top: 20px;
+  justify-self: flex-end;
+}

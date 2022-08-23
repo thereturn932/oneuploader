@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1 class="title-text">WELCOME TO OneUploader</h1>
+    </div>
+    {% for message in messages %}
+    <h3 class="message-text">{{message}}</h3>
+    {% endfor %}
+    <div class="containers">
+      <div class="ctr">
+        <div class="upload-container">
+          <h1>UPLOAD</h1>
+          <form method="POST" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %} {{ form.as_p }}
+            <button type="submit" class="btn">UPLOAD</button>
+          </form>
+        </div>
+        <div class="download-container">
+          <h1>DOWNLOAD</h1>
+          <form method="POST" action="download">
+            {% csrf_token %}
+            <p>Unique Id:</p>
+            <input type="text" name="unique_id" /><br />
+            <input class="btn" type="submit" value="DOWNLOAD" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
