@@ -9,9 +9,6 @@ coverage==6.4.3
 cryptography==37.0.4
 Django==4.0.6
 django-cors-headers==3.13.0
-django-encrypted-files==0.0.10
-djangorestframework==3.13.1
-djangorestframework-simplejwt==5.2.0
 gunicorn==20.1.0
 mypy-extensions==0.4.3
 pathspec==0.9.0
